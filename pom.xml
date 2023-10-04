@@ -11,11 +11,21 @@
     <!-- Project dependencies, build settings, and other configurations go here -->
 </project>
 
-<dependencies>
-    <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>5.3.10</version>
-    </dependency>
-    <!-- Add more dependencies as needed -->
-</dependencies>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.9.4</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+<name>Hotel-Management-Project-Java</name>
+<description>A sample Maven project</description>
+<url>https://github.com/BhushanShete/Hotel-Management-Project-Java</url>
+
