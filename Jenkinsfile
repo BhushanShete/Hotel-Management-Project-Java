@@ -30,7 +30,8 @@ pipeline {
                     bat 'mvn verify'
                     
                     // Run SonarQube analysis
-                    bat 'mvn sonar:sonar -Dsonar.projectKey=bhushan -Dsonar.projectName=\'bhushan\''
+                    bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=bhushan -Dsonar.projectName=\'bhushan\''
+
                 }
             }
         }
