@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    tools {
+    // Make sure the name matches the one configured in Jenkins
+    maven 'mvn'
+    }
+
     
     stages {
         stage('SCM') {
