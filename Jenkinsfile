@@ -3,7 +3,7 @@ pipeline {
     tools {
         // Specify the SonarScanner tool name you configured in Jenkins
         // This should match the name you entered in the global tool configuration
-        sonarqubeScanner 'SonarScanner'
+        sonarScanner 'SonarScanner'
     }
     stages {
         stage('Checkout') {
