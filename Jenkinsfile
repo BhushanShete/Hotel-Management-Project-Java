@@ -18,13 +18,16 @@ pipeline {
             steps {
                 // Set up environment variables for SonarQube
                 withSonarQubeEnv('bhushan') {
-                    // Run Maven build
-                    bat script: 'mvn clean verify sonar:sonar -Dsonar.projectKey=bhushan -Dsonar.projectName=\'bhushan\'', 
-                        // Use the correct Maven installation defined in Jenkins global configuration
-                        bat script: 'mvn clean verify sonar:sonar -Dsonar.projectKey=bhushan -Dsonar.projectName=\'bhushan\''
+                    // Run Maven clean
+                    bat 'mvn clean'
+                    
+                    // Run Maven verify
+                    bat 'mvn verify'
+                    
+                    // Run SonarQube analysis
+                    bat 'mvn sonar:sonar -Dsonar.projectKey=bhushan -Dsonar.projectName=\'bhushan\''
                 }
             }
         }
     }
 }
-
